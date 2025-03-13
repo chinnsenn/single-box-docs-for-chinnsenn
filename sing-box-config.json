@@ -31,7 +31,7 @@
           "disable_cache": true
         },
         {
-          "clash_mode": "🎯 全球直连",
+          "clash_mode": "Direct",
           "action": "route",
           "server": "ali"
         },
@@ -98,7 +98,7 @@
           "outbound": "GLOBAL"
         },
         {
-          "clash_mode": "🎯 全球直连",
+          "clash_mode": "Direct",
           "action": "route",
           "outbound": "🎯 全球直连"
         },
