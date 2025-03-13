@@ -107,8 +107,11 @@ config.outbounds.map(i => {
     if (['🇳🇬尼日利亚'].includes(i.tag)) {
       i.outbounds.push(...getTags(proxies, /尼日利亚|ngr|🇳🇬/i));
     }
-    if (['⛳全部节点', '⏫自动选择'].includes(i.tag)) {
+    if (['⛳全部节点'].includes(i.tag)) {
       i.outbounds.push(...getTags(proxies));
+    }
+    if (['⏫自动选择'].includes(i.tag)) {
+      i.outbounds.push(...getTags(proxies,/港|hk|hongkong|hong kong|🇭🇰|台|tw|taiwan|🇹🇼|日本|jp|japan|🇯🇵|美|us|unitedstates|united states|🇺🇲/));
     }
   });
 
