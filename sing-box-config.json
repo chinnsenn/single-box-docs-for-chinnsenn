@@ -13,6 +13,10 @@
           "detour": "🎯 全球直连"
         },
         {
+          "type": "udp",
+          "server": "1.1.1.1"
+        },
+        {
           "type": "fakeip",
           "tag": "fakeip",
           "inet4_range": "198.18.0.0/15",
@@ -55,7 +59,7 @@
           "server": "ali"
         }
       ],
-      "🐟 漏网之鱼": "🔍 Google",
+      "final": "🔍 Google",
       "independent_cache": true
     },
     "route": {
@@ -290,7 +294,7 @@
           "download_detour": "🎯 全球直连"
         }
       ],
-      "🐟 漏网之鱼": "🐟 漏网之鱼",
+      "final": "🐟 漏网之鱼",
       "auto_detect_interface": true
     },
     "outbounds": [
@@ -717,7 +721,7 @@
       },
       {
         "tag": "🎯 全球直连",
-        "type": "🎯 全球直连"
+        "type": "direct"
       }
     ],
     "inbounds": [
