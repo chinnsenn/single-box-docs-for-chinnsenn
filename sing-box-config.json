@@ -54,7 +54,7 @@
         "server": "Ali_DNS"
       }
     ],
-    "final": "Google_DNS",
+    "final": "Ali_DNS",
     "independent_cache": true
   },
   "log": {
