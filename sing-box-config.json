@@ -36,10 +36,6 @@
         "server": "Google_DNS"
       },
       {
-        "query_type": "HTTPS",
-        "action": "reject"
-      },
-      {
         "query_type": [
           "A",
           "AAAA"
@@ -81,6 +77,22 @@
       ]
     }
   },
+  "inbounds": [
+    {
+      "type": "tun",
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true
+    },
+    {
+      "type": "mixed",
+      "listen": "::",
+      "listen_port": 8890
+    }
+  ],
   "route": {
     "default_domain_resolver": {
       "server": "Ali_DNS"
@@ -940,22 +952,6 @@
     {
       "tag": "🎯 全球直连",
       "type": "direct"
-    }
-  ],
-  "inbounds": [
-    {
-      "type": "tun",
-      "address": [
-        "172.18.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
-      "auto_route": true,
-      "strict_route": true
-    },
-    {
-      "type": "mixed",
-      "listen": "::",
-      "listen_port": 8890
     }
   ]
 }
