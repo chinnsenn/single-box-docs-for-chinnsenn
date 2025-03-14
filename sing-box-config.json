@@ -3,7 +3,7 @@
     "dns": {
       "servers": [
         {
-          "tag": "🔍 Google",
+          "tag": "Google_DNS",
           "address": "https://8.8.8.8/dns-query",
           "detour": "⏫自动选择"
         },
@@ -32,7 +32,7 @@
         {
           "clash_mode": "Global",
           "action": "route",
-          "server": "🔍 Google"
+          "server": "Google_DNS"
         },
         {
           "query_type": "HTTPS",
@@ -44,7 +44,7 @@
             "AAAA"
           ],
           "action": "route",
-          "server": "🔍 Google",
+          "server": "Google_DNS",
           "rewrite_ttl": 1
         },
         {
@@ -53,7 +53,7 @@
           "server": "ali"
         }
       ],
-      "final": "🔍 Google",
+      "final": "Google_DNS",
       "independent_cache": true
     },
     "route": {
@@ -187,6 +187,26 @@
           ],
           "action": "route",
           "outbound": "🍎 Apple"
+        },
+        {
+          "rule_set": "disney_plus_domain",
+          "action": "route",
+          "outbound": "🎥 Disney+"
+        },
+        {
+          "rule_set": "primevideo_domain",
+          "action": "route",
+          "outbound": "🎥 PrimeVideo"
+        },
+        {
+          "rule_set": "gitlab_domain",
+          "action": "route",
+          "outbound": "🦊 Gitlab"
+        },
+        {
+          "rule_set": "github_domain",
+          "action": "route",
+          "outbound": "🐙 GitHub"
         },
         {
           "rule_set": [
@@ -329,6 +349,34 @@
           "type": "remote",
           "format": "binary",
           "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google-gemini.srs",
+          "download_detour": "🎯 全球直连"
+        },
+        {
+          "tag": "disney_plus_domain",
+          "type": "remote",
+          "format": "binary",
+          "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
+          "download_detour": "🎯 全球直连"
+        },
+        {
+          "tag": "primevideo_domain",
+          "type": "remote",
+          "format": "binary",
+          "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
+          "download_detour": "🎯 全球直连"
+        },
+        {
+          "tag": "gitlab_domain",
+          "type": "remote",
+          "format": "binary",
+          "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gitlab.srs",
+          "download_detour": "🎯 全球直连"
+        },
+        {
+          "tag": "github_domain",
+          "type": "remote",
+          "format": "binary",
+          "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs",
           "download_detour": "🎯 全球直连"
         }
       ],
@@ -483,9 +531,86 @@
         "default": "🚀 节点选择"
       },
       {
+        "tag": "🦊 Gitlab",
+        "type": "selector",
+        "outbounds": [
+          "⏫自动选择",
+          "🚀 节点选择",
+          "🎯 全球直连",
+          "🇭🇰香港",
+          "🇭🇰香港自动选择",
+          "🇹🇼台湾",
+          "🇹🇼台湾自动选择",
+          "🇯🇵日本",
+          "🇯🇵日本自动选择",
+          "🇸🇬新加坡",
+          "🇸🇬新加坡自动选择",
+          "🇺🇲美国",
+          "🇺🇲美国自动选择"
+        ],
+        "default": "🚀 节点选择"
+      },
+      {
+        "tag": "🐙 GitHub",
+        "type": "selector",
+        "outbounds": [
+          "⏫自动选择",
+          "🚀 节点选择",
+          "🎯 全球直连",
+          "🇭🇰香港",
+          "🇭🇰香港自动选择",
+          "🇹🇼台湾",
+          "🇹🇼台湾自动选择",
+          "🇯🇵日本",
+          "🇯🇵日本自动选择",
+          "🇸🇬新加坡",
+          "🇸🇬新加坡自动选择",
+          "🇺🇲美国",
+          "🇺🇲美国自动选择"
+        ],
+        "default": "🚀 节点选择"
+      },
+      {
         "tag": "🎥 Netflix",
         "type": "selector",
         "outbounds": [
+          "🇭🇰香港自动选择",
+          "🇹🇼台湾自动选择",
+          "🇯🇵日本自动选择",
+          "🇸🇬新加坡自动选择",
+          "🇺🇲美国自动选择",
+          "🇭🇰香港",
+          "🇹🇼台湾",
+          "🇯🇵日本",
+          "🇸🇬新加坡",
+          "🇺🇲美国",
+          "🇵🇭菲律宾"
+        ],
+        "default": "🇭🇰香港自动选择"
+      },
+      {
+        "tag": "🎥 Disney+",
+        "type": "selector",
+        "outbounds": [
+          "🇭🇰香港自动选择",
+          "🇹🇼台湾自动选择",
+          "🇯🇵日本自动选择",
+          "🇸🇬新加坡自动选择",
+          "🇺🇲美国自动选择",
+          "🇭🇰香港",
+          "🇹🇼台湾",
+          "🇯🇵日本",
+          "🇸🇬新加坡",
+          "🇺🇲美国",
+          "🇵🇭菲律宾"
+        ],
+        "default": "🇭🇰香港自动选择"
+      },
+      {
+        "tag": "🎥 PrimeVideo",
+        "type": "selector",
+        "outbounds": [
+          "🎯 全球直连",
           "🇭🇰香港自动选择",
           "🇹🇼台湾自动选择",
           "🇯🇵日本自动选择",
@@ -823,7 +948,7 @@
     ],
     "experimental": {
       "clash_api": {
-        "external_controller": "127.0.0.1:9090",
+        "external_controller": "127.0.0.1:9999",
         "external_ui": "ui",
         "external_ui_download_url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/metacubexd/archive/gh-pages.zip",
         "external_ui_download_detour": "🎯 全球直连",
